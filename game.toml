@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Forsaken"
+id = "SLES-00745"
+players = 1
+exe = "disc/SLES_007.45"
+disc = "disc/Forsaken (Europe).cue"
+discs = ["disc/Forsaken (Europe).cue"]
+disc_serials = ["SLES-00745"]
+load_address = "0x80010000"
+entry_pc = "0x8005F100"
+text_size = "0x0006E800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Forsaken (Europe) (Track 1).bin"
+cue_name = "Forsaken (Europe).cue"
+boot_exe = "SLES_007.45"
+known_sizes = [91572768]
+known_md5 = [
+  "fe4797935b3fde7dcd3cdd28b48ab03c",
+]
+known_sha1 = [
+  "85b453ba3c85d6bb8eff249b90d40af05ec1f39c",
+]
+known_crc32 = [
+  "9fd97e01",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Forsaken Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 13
+required_disc_fp = "a15f32cc155aed125136987d0039ccd0544e71d27898a3e5786c35e08638ce6f"

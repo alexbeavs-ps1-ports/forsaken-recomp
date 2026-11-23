@@ -1,0 +1,46 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Forsaken",
+    "id": "SLES-00745",
+    "boot_exe": "SLES_007.45"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Forsaken (Europe).cue",
+    "bin_name": "Forsaken (Europe) (Track 1).bin",
+    "track_counts": [
+      13
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 91572768,
+      "md5": "fe4797935b3fde7dcd3cdd28b48ab03c",
+      "sha1": "85b453ba3c85d6bb8eff249b90d40af05ec1f39c",
+      "crc32": "9fd97e01"
+    },
+    "disc_fp": "a15f32cc155aed125136987d0039ccd0544e71d27898a3e5786c35e08638ce6f"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x8005F100",
+    "text_size": "0x0006E800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 871,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

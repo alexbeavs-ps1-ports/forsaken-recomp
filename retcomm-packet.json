@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "forsaken-psx",
+  "name": "Forsaken",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "forsaken-recomp",
+  "rom_identity": {
+    "crc32": [
+      "9fd97e01"
+    ],
+    "md5": [
+      "fe4797935b3fde7dcd3cdd28b48ab03c"
+    ],
+    "sha1": [
+      "85b453ba3c85d6bb8eff249b90d40af05ec1f39c"
+    ],
+    "disc_serials": [
+      "SLES-00745"
+    ],
+    "sizes": [
+      91572768
+    ],
+    "filenames": [
+      "Forsaken (Europe).cue",
+      "Forsaken (Europe) (Track 1).bin"
+    ],
+    "track_counts": [
+      13
+    ],
+    "disc_fps": [
+      "a15f32cc155aed125136987d0039ccd0544e71d27898a3e5786c35e08638ce6f"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/forsaken-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "forsaken-*-windows-x64.zip",
+      "linux-x64": "forsaken-*-linux-x64.zip",
+      "macos-arm64": "forsaken-*-macos-arm64.zip",
+      "macos-x64": "forsaken-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "forsaken.exe",
+    "linux": "forsaken",
+    "macos": "forsaken"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/forsaken-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

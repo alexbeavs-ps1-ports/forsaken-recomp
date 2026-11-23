@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Forsaken",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "forsaken-recomp",
+  "original": {
+    "region": "Europe",
+    "serial": "SLES-00745"
+  }
+}
